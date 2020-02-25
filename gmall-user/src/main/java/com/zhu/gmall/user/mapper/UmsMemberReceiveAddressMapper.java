@@ -1,6 +1,6 @@
 package com.zhu.gmall.user.mapper;
 
-import com.zhu.gmall.user.bean.UmsMemberReceiveAddress;
+import com.zhu.gmall.bean.UmsMemberReceiveAddress;
 import org.springframework.stereotype.Component;
 import tk.mybatis.mapper.common.Mapper;
 
