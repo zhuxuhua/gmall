@@ -4,7 +4,6 @@ import com.zhu.gmall.bean.PmsBaseCatalog1;
 import org.springframework.stereotype.Component;
 import tk.mybatis.mapper.common.Mapper;
 
-@Component("pmsBaseCatalog1Mapper")
 public interface PmsBaseCatalog1Mapper extends Mapper<PmsBaseCatalog1> {
 }
 
