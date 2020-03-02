@@ -1,6 +1,7 @@
 package com.zhu.gmall.service;
 
 import com.zhu.gmall.bean.PmsBaseAttrInfo;
+import com.zhu.gmall.bean.PmsBaseAttrValue;
 
 import java.util.List;
 
@@ -10,5 +11,7 @@ import java.util.List;
 public interface AttrService {
     List<PmsBaseAttrInfo> attrInfoList(String catalog3Id);
 
-    void saveAttrInfo(PmsBaseAttrInfo pmsBaseAttrInfo);
+    String saveAttrInfo(PmsBaseAttrInfo pmsBaseAttrInfo);
+
+    List<PmsBaseAttrValue> getAttrValueList(String attrId);
 }

@@ -1,5 +1,6 @@
 package com.zhu.gmall.service;
 
+import com.zhu.gmall.bean.PmsBaseAttrValue;
 import com.zhu.gmall.bean.PmsBaseCatalog1;
 import com.zhu.gmall.bean.PmsBaseCatalog2;
 import com.zhu.gmall.bean.PmsBaseCatalog3;
@@ -12,4 +13,5 @@ public interface CatalogService {
     List<PmsBaseCatalog2> getCatalog2(String catalog1Id);
 
     List<PmsBaseCatalog3> getCatalog3(String catalog2Id);
+
 }

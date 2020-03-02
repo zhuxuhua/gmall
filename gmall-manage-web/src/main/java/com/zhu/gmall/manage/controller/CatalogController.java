@@ -1,6 +1,7 @@
 package com.zhu.gmall.manage.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.zhu.gmall.bean.PmsBaseAttrValue;
 import com.zhu.gmall.bean.PmsBaseCatalog1;
 import com.zhu.gmall.bean.PmsBaseCatalog2;
 import com.zhu.gmall.bean.PmsBaseCatalog3;
@@ -20,12 +21,12 @@ public class CatalogController {
     @Reference
     CatalogService catalogService;
 
-    @RequestMapping("getCatalog3")
+    @RequestMapping("getCatalog1")
     @ResponseBody
-    public List<PmsBaseCatalog3> getCatalog3(String catalog2Id){
+    public List<PmsBaseCatalog1> getCatalog1(){
 
-        List<PmsBaseCatalog3> catalog3s = catalogService.getCatalog3(catalog2Id);
-        return catalog3s;
+        List<PmsBaseCatalog1> catalog1s = catalogService.getCatalog1();
+        return catalog1s;
     }
 
     @RequestMapping("getCatalog2")
@@ -36,11 +37,12 @@ public class CatalogController {
         return catalog2s;
     }
 
-    @RequestMapping("getCatalog1")
+    @RequestMapping("getCatalog3")
     @ResponseBody
-    public List<PmsBaseCatalog1> getCatalog1(){
+    public List<PmsBaseCatalog3> getCatalog3(String catalog2Id){
 
-        List<PmsBaseCatalog1> catalog1s = catalogService.getCatalog1();
-        return catalog1s;
+        List<PmsBaseCatalog3> catalog3s = catalogService.getCatalog3(catalog2Id);
+        return catalog3s;
     }
+
 }

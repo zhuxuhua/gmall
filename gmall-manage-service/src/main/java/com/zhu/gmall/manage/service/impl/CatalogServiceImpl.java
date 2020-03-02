@@ -1,12 +1,11 @@
 package com.zhu.gmall.manage.service.impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
+import com.zhu.gmall.bean.PmsBaseAttrValue;
 import com.zhu.gmall.bean.PmsBaseCatalog1;
 import com.zhu.gmall.bean.PmsBaseCatalog2;
 import com.zhu.gmall.bean.PmsBaseCatalog3;
-import com.zhu.gmall.manage.mapper.PmsBaseCatalog1Mapper;
-import com.zhu.gmall.manage.mapper.PmsBaseCatalog2Mapper;
-import com.zhu.gmall.manage.mapper.PmsBaseCatalog3Mapper;
+import com.zhu.gmall.manage.mapper.*;
 import com.zhu.gmall.service.CatalogService;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -23,6 +22,9 @@ public class CatalogServiceImpl implements CatalogService {
 
     @Autowired
     PmsBaseCatalog3Mapper pmsBaseCatalog3Mapper;
+
+    @Autowired
+    PmsBaseAttrValueMapper pmsBaseAttrValueMapper;
 
     @Override
     public List<PmsBaseCatalog1> getCatalog1() {
@@ -44,4 +46,5 @@ public class CatalogServiceImpl implements CatalogService {
         List<PmsBaseCatalog3> pmsBaseCatalog3s = pmsBaseCatalog3Mapper.select(pmsBaseCatalog3);
         return pmsBaseCatalog3s;
     }
+
 }
