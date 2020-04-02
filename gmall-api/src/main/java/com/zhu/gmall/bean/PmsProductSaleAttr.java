@@ -1,7 +1,5 @@
 package com.zhu.gmall.bean;
 
-import com.zhu.gmall.bean.PmsProductSaleAttrValue;
-
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Transient;
@@ -12,7 +10,7 @@ public class PmsProductSaleAttr implements Serializable {
 
     @Id
     @Column
-    String id ;
+    String id;
 
     @Column
     String productId;

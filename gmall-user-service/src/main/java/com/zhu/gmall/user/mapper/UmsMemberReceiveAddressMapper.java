@@ -5,5 +5,5 @@ import org.springframework.stereotype.Component;
 import tk.mybatis.mapper.common.Mapper;
 
 @Component("umsMemberReceiveAddress")
-public interface UmsMemberReceiveAddressMapper  extends Mapper<UmsMemberReceiveAddress> {
+public interface UmsMemberReceiveAddressMapper extends Mapper<UmsMemberReceiveAddress> {
 }
