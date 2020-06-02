@@ -36,7 +36,7 @@ public class GmallManageWebApplicationTests {
 
         String[] upload_file = storageClient.upload_file("E:/background/324574.jpg", "jpg", null);
 
-        String url = "http://47.107.106.190/";
+        String url = "http://192.168.232.131/";
 
         for (String s : upload_file) {
             url += "/" + s;

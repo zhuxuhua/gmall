@@ -9,11 +9,12 @@ import com.zhu.gmall.manage.mapper.PmsBaseAttrValueMapper;
 import com.zhu.gmall.manage.mapper.PmsBaseSaleAttrMapper;
 import com.zhu.gmall.service.AttrService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.util.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import tk.mybatis.mapper.entity.Example;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by LuckyZhu on 2020/3/1
@@ -106,5 +107,14 @@ public class AttrServiceImpl implements AttrService {
     @Override
     public List<PmsBaseSaleAttr> baseSaleAttrList() {
         return pmsBaseSaleAttrMapper.selectAll();
+    }
+
+    @Override
+    public List<PmsBaseAttrInfo> getAttrValueListByValueId(Set<String> valueSet) {
+
+        String valueIdStr = StringUtils.join(valueSet, ",");
+        List<PmsBaseAttrInfo> pmsBaseAttrInfos = pmsBaseAttrInfoMapper.selectAttrValueByValueId(valueIdStr);
+
+        return pmsBaseAttrInfos;
     }
 }
